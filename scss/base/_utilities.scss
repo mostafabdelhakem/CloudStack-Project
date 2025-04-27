@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.mt-md {
+  margin-top: $spacing-md;
+}
+.mb-md {
+  margin-bottom: $spacing-md;
+}
+
+.container {
+  width: 100%;
+  max-width: $bp-xl;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+
+  @include respond(md) {
+    padding: 0 $spacing-lg;
+  }
+}

@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-md;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  @include transition(all);
+
+  &--primary {
+    background: $accent;
+    color: $text-light;
+
+    &:hover {
+      color: $accent;
+      background: $text-light;
+    }
+  }
+
+  &--outline {
+    border: 2px solid $accent;
+    color: $accent;
+
+    &:hover {
+      background: $accent;
+      color: $text-light;
+    }
+  }
+
+  &--lg {
+    padding: $spacing-md $spacing-lg;
+    font-size: rem(18);
+  }
+
+  &--block {
+    display: block;
+    text-align: center;
+  }
+}

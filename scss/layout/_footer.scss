@@ -1,0 +1,108 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.footer {
+  padding: $spacing-xl 0;
+  background: $primary;
+  color: $text-light;
+
+  .footer-content {
+    display: grid;
+    gap: $spacing-lg;
+    grid-template-columns: 1fr;
+
+    @include respond(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .footer-about {
+    .logo img {
+      height: 40px;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      opacity: 0.8;
+      margin-bottom: $spacing-md;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    gap: $spacing-sm;
+
+    a {
+      color: $text-light;
+      font-size: rem(20);
+      @include transition(color);
+
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+
+  .footer-links {
+    h3 {
+      font-size: rem(18);
+      margin-bottom: $spacing-md;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        margin-bottom: $spacing-sm;
+
+        a {
+          color: $text-light;
+          opacity: 0.8;
+          @include transition(opacity);
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-newsletter {
+    .newsletter-form {
+      display: flex;
+      gap: $spacing-sm;
+
+      input {
+        flex: 1;
+        padding: $spacing-sm;
+        border: none;
+        border-radius: 5px;
+        width: auto;
+        font-size: rem(16);
+      }
+
+      button {
+        background: $accent;
+        border: none;
+        padding: $spacing-sm;
+        border-radius: 5px;
+        color: $text-light;
+        cursor: pointer;
+        @include transition(background);
+
+        &:hover {
+          background: $accent; // Use a darker shade of the accent color
+          // darken($accent, 10%);
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: $spacing-lg;
+    opacity: 0.6;
+  }
+}

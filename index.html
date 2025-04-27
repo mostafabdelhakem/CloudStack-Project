@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CloudStack - Modern Cloud Hosting</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+   <!-- Header with Navigation -->
+   <header class="header">
+      <div class="container">
+         <nav class="nav">
+            <div class="nav__logo">
+               <a href="#"><img src="assets/images/cloudstack-logo.svg" alt="CloudStack"></a>
+            </div>
+            <div class="nav__menu">
+               <ul class="nav__list">
+                  <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+                  <li class="nav__item"><a href="#features" class="nav__link">Features</a></li>
+                  <li class="nav__item"><a href="#pricing" class="nav__link">Pricing</a></li>
+                  <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                  <li class="nav__item"><a href="#faq" class="nav__link">FAQ</a></li>
+                  <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+               </ul>
+            </div>
+            <div class="nav__actions">
+               <a href="#" class="btn btn--outline">Login</a>
+               <a href="#" class="btn btn--primary">Sign Up</a>
+            </div>
+            <div class="nav__toggle">
+               <span class="nav__toggle-bar"></span>
+               <span class="nav__toggle-bar"></span>
+               <span class="nav__toggle-bar"></span>
+            </div>
+         </nav>
+      </div>
+   </header>
+
+   <!-- Hero Section -->
+   <section class="hero">
+      <div class="container">
+         <div class="hero__content">
+            <h1 class="hero__title">Cloud Hosting for the Modern Web</h1>
+            <p class="hero__description">Lightning-fast, secure, and scalable hosting solutions for developers and
+               businesses.</p>
+            <div class="hero__actions">
+               <!-- <a href="#" class="btn btn--primary btn--lg">Get Started</a> -->
+               <a href="#" class="btn btn--primary btn--lg" aria-label="Get started with CloudStack">Get Started</a>
+               <a href="#pricing" class="btn btn--outline btn--lg" aria-label="View plans with CloudStack">View
+                  Plans</a>
+            </div>
+         </div>
+         <div class="hero__image">
+            <img src="assets/images/server-illustration.svg" alt="Cloud Server">
+         </div>
+      </div>
+   </section>
+
+   <!-- Stats Section -->
+   <section class="stats">
+      <div class="container">
+         <div class="stats__grid">
+            <div class="stats__item" style="--index: 0;">
+               <h3 class="stats__number" data-count="99.9">99.9%</h3>
+               <p class="stats__label">Uptime</p>
+            </div>
+            <div class="stats__item" style="--index: 1;">
+               <h3 class="stats__number" data-count="24">24/7</h3>
+               <p class="stats__label">Customer Support</p>
+            </div>
+            <div class="stats__item" style="--index: 2;">
+               <h3 class="stats__number" data-count="10000">10k+</h3>
+               <p class="stats__label">Happy Customers</p>
+            </div>
+            <div class="stats__item" style="--index: 3;">
+               <h3 class="stats__number" data-count="15">15+</h3>
+               <p class="stats__label">Global Locations</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Features Section -->
+   <section class="features" id="features">
+      <div class="container">
+         <div class="section-header">
+            <h2 class="section-title">Powerful Features</h2>
+            <p class="section-subtitle">Everything you need for fast, reliable web hosting</p>
+         </div>
+         <div class="features__grid">
+            <div class="feature-card" style="--index: 0;">
+               <div class="feature-card__icon" aria-label="Lightning Fast Feature">
+                  <i class="fas fa-rocket"></i>
+               </div>
+               <h3 class="feature-card__title">Lightning Fast</h3>
+               <p class="feature-card__description">Optimized servers with SSD storage for maximum performance.</p>
+            </div>
+            <div class="feature-card" style="--index: 1;">
+               <div class="feature-card__icon" aria-label="Advanced Security Feature">
+                  <i class="fas fa-shield-alt"></i>
+               </div>
+               <h3 class="feature-card__title">Advanced Security</h3>
+               <p class="feature-card__description">Free SSL certificates and DDoS protection included.</p>
+            </div>
+            <div class="feature-card" style="--index: 2;">
+               <div class="feature-card__icon" aria-label="Scalable Resources Feature">
+                  <i class="fas fa-chart-line"></i>
+               </div>
+               <h3 class="feature-card__title">Scalable Resources</h3>
+               <p class="feature-card__description">Easily upgrade your plan as your website grows.</p>
+            </div>
+            <div class="feature-card" style="--index: 3;">
+               <div class="feature-card__icon" aria-label="99.9% Uptime Feature">
+                  <i class="fas fa-clock"></i>
+               </div>
+               <h3 class="feature-card__title">99.9% Uptime</h3>
+               <p class="feature-card__description">We guarantee your website stays online when you need it.</p>
+            </div>
+            <div class="feature-card" style="--index: 4;">
+               <div class="feature-card__icon" aria-label="Daily Backups Feature">
+                  <i class="fas fa-database"></i>
+               </div>
+               <h3 class="feature-card__title">Daily Backups</h3>
+               <p class="feature-card__description">Automatic backups to keep your data safe and secure.</p>
+            </div>
+            <div class="feature-card" style="--index: 5;">
+               <div class="feature-card__icon" aria-label="24/7 Support Feature">
+                  <i class="fas fa-headset"></i>
+               </div>
+               <h3 class="feature-card__title">24/7 Support</h3>
+               <p class="feature-card__description">Expert support team available around the clock.</p>
+            </div>
+            <div class="feature-card" style="--index: 6;">
+               <div class="feature-card__icon" aria-label="One-Click Installs Feature">
+                  <i class="fas fa-cogs"></i>
+               </div>
+               <h3 class="feature-card__title">One-Click Installs</h3>
+               <p class="feature-card__description">Install WordPress, Joomla, and more with a single click.</p>
+            </div>
+            <div class="feature-card" style="--index: 7;">
+               <div class="feature-card__icon" aria-label="Global CDN Feature">
+                  <i class="fas fa-globe"></i>
+               </div>
+               <h3 class="feature-card__title">Global CDN</h3>
+               <p class="feature-card__description">Deliver content faster with our global content delivery network.</p>
+            </div>
+            <div class="feature-card" style="--index: 8;">
+               <div class="feature-card__icon" aria-label="Developer Tools Feature">
+                  <i class="fas fa-code"></i>
+               </div>
+               <h3 class="feature-card__title">Developer Tools</h3>
+               <p class="feature-card__description">Git integration, SSH access, and staging environments.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Pricing Section -->
+   <section class="pricing" id="pricing">
+      <div class="container">
+         <div class="section-header">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <p class="section-subtitle">Choose the plan that fits your needs</p>
+         </div>
+
+         <div class="pricing__toggle">
+            <span>Monthly</span>
+            <label class="switch">
+               <input type="checkbox" id="pricing-toggle">
+               <span class="slider round"></span>
+            </label>
+            <span>Yearly <span class="pricing__save">Save 20%</span></span>
+         </div>
+
+         <div class="pricing__grid">
+            <!-- Starter Plan -->
+            <div class="pricing-card">
+               <div class="pricing-card__header">
+                  <h3 class="pricing-card__title">Starter</h3>
+                  <div class="pricing-card__price">
+                     <div class="price monthly">$9<span>/month</span></div>
+                     <div class="price yearly">$7<span>/month</span></div>
+                  </div>
+                  <p class="pricing-card__description">Perfect for small websites</p>
+               </div>
+               <div class="pricing-card__features">
+                  <ul>
+                     <li><i class="fas fa-check"></i> 1 Website</li>
+                     <li><i class="fas fa-check"></i> 10GB SSD Storage</li>
+                     <li><i class="fas fa-check"></i> 50GB Bandwidth</li>
+                     <li><i class="fas fa-check"></i> 5 Email Accounts</li>
+                     <li><i class="fas fa-check"></i> Free SSL Certificate</li>
+                     <li><i class="fas fa-times"></i> 24/7 Priority Support</li>
+                  </ul>
+               </div>
+               <div class="pricing-card__action">
+                  <a href="#" class="btn btn--outline btn--block">Get Started</a>
+               </div>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="pricing-card pricing-card--featured">
+               <div class="pricing-card__badge">Popular</div>
+               <div class="pricing-card__header">
+                  <h3 class="pricing-card__title">Professional</h3>
+                  <div class="pricing-card__price">
+                     <div class="price monthly">$19<span>/month</span></div>
+                     <div class="price yearly">$15<span>/month</span></div>
+                  </div>
+                  <p class="pricing-card__description">Great for growing businesses</p>
+               </div>
+               <div class="pricing-card__features">
+                  <ul>
+                     <li><i class="fas fa-check"></i> 5 Websites</li>
+                     <li><i class="fas fa-check"></i> 30GB SSD Storage</li>
+                     <li><i class="fas fa-check"></i> 100GB Bandwidth</li>
+                     <li><i class="fas fa-check"></i> 20 Email Accounts</li>
+                     <li><i class="fas fa-check"></i> Free SSL Certificate</li>
+                     <li><i class="fas fa-check"></i> 24/7 Priority Support</li>
+                  </ul>
+               </div>
+               <div class="pricing-card__action">
+                  <a href="#" class="btn btn--primary btn--block">Get Started</a>
+               </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="pricing-card">
+               <div class="pricing-card__header">
+                  <h3 class="pricing-card__title">Enterprise</h3>
+                  <div class="pricing-card__price">
+                     <div class="price monthly">$49<span>/month</span></div>
+                     <div class="price yearly">$39<span>/month</span></div>
+                  </div>
+                  <p class="pricing-card__description">For large scale applications</p>
+               </div>
+               <div class="pricing-card__features">
+                  <ul>
+                     <li><i class="fas fa-check"></i> Unlimited Websites</li>
+                     <li><i class="fas fa-check"></i> 100GB SSD Storage</li>
+                     <li><i class="fas fa-check"></i> Unlimited Bandwidth</li>
+                     <li><i class="fas fa-check"></i> Unlimited Email Accounts</li>
+                     <li><i class="fas fa-check"></i> Free SSL Certificate</li>
+                     <li><i class="fas fa-check"></i> 24/7 Priority Support</li>
+                  </ul>
+               </div>
+               <div class="pricing-card__action">
+                  <a href="#" class="btn btn--outline btn--block">Get Started</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Testimonials Section -->
+   <section class="testimonials" id="testimonials">
+      <div class="container">
+         <div class="section-header">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Don't just take our word for it</p>
+         </div>
+
+         <div class="testimonials__grid">
+            <div class="testimonial-card">
+               <p class="testimonial-card__quote">CloudStack has dramatically improved our website performance. The
+                  speed is incredible and customer support is always there when we need it.</p>
+               <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">
+                     <img src="assets/images/avatar-1.jpg" alt="Sarah Johnson">
+                  </div>
+                  <div>
+                     <h4 class="testimonial-card__name">Sarah Johnson</h4>
+                     <p class="testimonial-card__position">CEO, TechStart</p>
+                  </div>
+               </div>
+               <div class="testimonial-card__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+               </div>
+            </div>
+
+            <div class="testimonial-card">
+               <p class="testimonial-card__quote">After switching to CloudStack, our page load times decreased by 40%.
+                  Their team helped us migrate everything seamlessly.</p>
+               <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">
+                     <img src="assets/images/avatar-2.jpg" alt="David Chen">
+                  </div>
+                  <div>
+                     <h4 class="testimonial-card__name">David Chen</h4>
+                     <p class="testimonial-card__position">Web Developer, PixelPerfect</p>
+                  </div>
+               </div>
+               <div class="testimonial-card__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+               </div>
+            </div>
+
+            <div class="testimonial-card">
+               <p class="testimonial-card__quote">The reliability and security features of CloudStack give us peace of
+                  mind. We've never experienced any downtime in over 2 years.</p>
+               <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">
+                     <img src="assets/images/avatar-3.jpg" alt="Emily Rodriguez">
+                  </div>
+                  <div>
+                     <h4 class="testimonial-card__name">Emily Rodriguez</h4>
+                     <p class="testimonial-card__position">CTO, GrowthLabs</p>
+                  </div>
+               </div>
+               <div class="testimonial-card__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Server Locations Section -->
+   <section class="locations" id="locations">
+      <div class="container">
+         <div class="section-header">
+            <h2 class="section-title">Global Network</h2>
+            <p class="section-subtitle">Our servers are strategically located around the world for maximum performance
+            </p>
+         </div>
+
+         <div class="locations__map">
+            <img src="assets/images/world-map.svg" alt="World map showing server locations">
+            <div class="locations__point locations__point--ny" tabindex="0" aria-label="Server location: New York">
+               <div class="locations__tooltip">New York</div>
+            </div>
+            <div class="locations__point locations__point--london" tabindex="0" aria-label="Server location: London">
+               <div class="locations__tooltip">London</div>
+            </div>
+            <div class="locations__point locations__point--singapore" tabindex="0"
+               aria-label="Server location: Singapore">
+               <div class="locations__tooltip">Singapore</div>
+            </div>
+            <div class="locations__point locations__point--sydney" tabindex="0" aria-label="Server location: Sydney">
+               <div class="locations__tooltip">Sydney</div>
+            </div>
+            <div class="locations__point locations__point--tokyo" tabindex="0" aria-label="Server location: Tokyo">
+               <div class="locations__tooltip">Tokyo</div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- FAQ Section -->
+   <section class="faq" id="faq">
+      <div class="container">
+         <div class="section-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Find answers to common questions about our services</p>
+         </div>
+
+         <div class="faq__grid">
+            <div class="faq-item">
+               <h3 class="faq-item__question">What is cloud hosting?</h3>
+               <div class="faq-item__answer">
+                  <p>Cloud hosting is a type of web hosting that uses multiple servers to balance load and maximize
+                     uptime. Instead of using a single server, your website draws resources from a network of connected
+                     virtual and physical servers.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <h3 class="faq-item__question">How does CloudStack compare to traditional hosting?</h3>
+               <div class="faq-item__answer">
+                  <p>Unlike traditional hosting that relies on a single server, CloudStack uses a network of servers,
+                     providing better reliability, scalability, and performance. This means your website can handle
+                     traffic spikes without downtime and can grow easily as your needs change.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <h3 class="faq-item__question">Can I upgrade my plan later?</h3>
+               <div class="faq-item__answer">
+                  <p>Yes, you can easily upgrade your hosting plan as your website grows. Our scalable infrastructure
+                     allows for seamless transitions between plans without any downtime or technical complications.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <h3 class="faq-item__question">Do you offer a money-back guarantee?</h3>
+               <div class="faq-item__answer">
+                  <p>Yes, we offer a 30-day money-back guarantee for all our hosting plans. If you're not satisfied with
+                     our services within the first month, we'll provide a full refund, no questions asked.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <h3 class="faq-item__question">How do I migrate my existing website?</h3>
+               <div class="faq-item__answer">
+                  <p>We offer free website migration services for all new customers. Our technical team will handle the
+                     entire process for you, ensuring a smooth transition without any data loss or downtime.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <h3 class="faq-item__question">What security measures does CloudStack provide?</h3>
+               <div class="faq-item__answer">
+                  <p>CloudStack provides advanced security features, including free SSL certificates, DDoS protection,
+                     daily backups, and regular security updates to keep your website safe from threats.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <h3 class="faq-item__question">What kind of support do you offer?</h3>
+               <div class="faq-item__answer">
+                  <p>We offer 24/7 expert support via live chat, email, and phone. Our team is always ready to assist
+                     with any technical issues, ensuring your website runs smoothly at all times.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <h3 class="faq-item__question">How does CloudStack ensure website performance?</h3>
+               <div class="faq-item__answer">
+                  <p>CloudStack uses a global CDN, SSD storage, and optimized servers to ensure fast load times and
+                     99.9% uptime. Our infrastructure is designed to handle high traffic with minimal latency.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Contact Section -->
+   <section class="contact-section" id="contact">
+      <div class="container">
+         <div class="section-header">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">We're here to help with any questions about our hosting services</p>
+         </div>
+
+         <div class="contact-wrapper">
+            <div class="contact-info">
+               <div class="contact-item">
+                  <div class="icon">
+                     <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="content">
+                     <h3>Our Location</h3>
+                     <p>123 Cloud Street, Tech City, TC 12345</p>
+                  </div>
+               </div>
+
+               <div class="contact-item">
+                  <div class="icon">
+                     <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="content">
+                     <h3>Call Us</h3>
+                     <p>+1 (555) 123-4567</p>
+                  </div>
+               </div>
+
+               <div class="contact-item">
+                  <div class="icon">
+                     <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="content">
+                     <h3>Email Us</h3>
+                     <p>support@cloudstack.com</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="contact-form">
+               <div class="form-wrapper">
+                  <form id="contactForm">
+                     <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                     </div>
+                     <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                     </div>
+                     <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                     </div>
+                     <button type="submit" class="btn btn-primary">Send Message</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Footer -->
+   <footer class="footer">
+      <div class="container">
+         <div class="footer-content">
+            <div class="footer-about">
+               <div class="logo">
+                  <img src="assets/images/cloudstack-logo.svg" alt="CloudStack">
+               </div>
+               <p>Premium cloud hosting services for businesses of all sizes. Experience blazing fast performance with
+                  our SSD-powered infrastructure.</p>
+               <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+               </div>
+            </div>
+
+            <div class="footer-links">
+               <h3>Quick Links</h3>
+               <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#features">Features</a></li>
+                  <li><a href="#pricing">Pricing</a></li>
+                  <li><a href="#testimonials">Testimonials</a></li>
+                  <li><a href="#faq">FAQ</a></li>
+                  <li><a href="#contact">Contact</a></li>
+               </ul>
+            </div>
+
+            <div class="footer-links">
+               <h3>Our Services</h3>
+               <ul>
+                  <li><a href="#">Web Hosting</a></li>
+                  <li><a href="#">VPS Hosting</a></li>
+                  <li><a href="#">Dedicated Servers</a></li>
+                  <li><a href="#">Cloud Hosting</a></li>
+                  <li><a href="#">Domain Registration</a></li>
+                  <li><a href="#">SSL Certificates</a></li>
+               </ul>
+            </div>
+
+            <div class="footer-newsletter">
+               <h3>Newsletter</h3>
+               <p>Subscribe to our newsletter for the latest updates and offers.</p>
+               <form class="newsletter-form">
+                  <input type="email" placeholder="Your Email Address" required>
+                  <button type="submit"><i class="fas fa-paper-plane"></i></button>
+               </form>
+            </div>
+         </div>
+
+         <div class="footer-bottom">
+            <p>&copy; 2025 CloudStack. All Rights Reserved.</p>
+         </div>
+      </div>
+   </footer>
+</body>
+<script src="assets/js/main.js" defer></script>
+
+</html>

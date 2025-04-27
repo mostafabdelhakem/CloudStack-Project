@@ -1,0 +1,108 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: $spacing-md;
+
+  &__logo img {
+    height: 40px;
+  }
+
+  &__menu {
+    display: none !important; /* Ensure hidden by default */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+
+    &.active {
+      display: block !important; /* Force display on toggle */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--card-bg);
+      padding: $spacing-md;
+      box-shadow: var(--shadow);
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 999;
+    }
+
+    @include respond(md) {
+      display: flex !important;
+      position: static;
+      padding: 0;
+      opacity: 1;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    list-style: none;
+
+    @include respond(md) {
+      flex-direction: row;
+    }
+  }
+
+  &__link {
+    color: var(--text);
+    font-weight: 500;
+    font-size: rem(16);
+    padding: $spacing-sm 0;
+    display: block;
+    @include transition(color);
+
+    &.active,
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__actions {
+    display: none;
+
+    @include respond(md) {
+      display: flex;
+      gap: $spacing-sm;
+    }
+  }
+
+  &__toggle {
+    display: block;
+    cursor: pointer;
+
+    @include respond(md) {
+      display: none;
+    }
+
+    &-bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: var(--text);
+      margin: 5px 0;
+      @include transition(all);
+    }
+
+    &.active &-bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active &-bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    &.active &-bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}

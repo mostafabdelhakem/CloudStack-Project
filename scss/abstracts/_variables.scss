@@ -1,0 +1,41 @@
+$primary: #1a1a1a;
+$secondary: #6200ea;
+$accent: #00d4ff;
+$bg-light: #f4f4f9;
+$bg-dark: #121212;
+$text-light: #ffffff;
+$text-dark: #e0e0e0;
+
+$font-primary: "Roboto", sans-serif;
+$font-secondary: "Montserrat", sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.6;
+
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 4rem;
+
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+
+$shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
+$shadow-dark: 0 4px 15px rgba(255, 255, 255, 0.1);
+
+:root {
+  --bg: #{$bg-light};
+  --text: #{$primary};
+  --accent: #{$accent};
+  --card-bg: #{$text-light};
+  --shadow: #{$shadow-light};
+}
+
+[data-theme="dark"] {
+  --bg: #{$bg-dark};
+  --text: #{$text-dark};
+  --card-bg: #{$bg-dark};
+  --shadow: #{$shadow-dark};
+}

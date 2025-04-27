@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-secondary;
+  font-weight: 700;
+  color: var(--text);
+}
+
+h1 {
+  font-size: rem(36);
+  @include respond(md) {
+    font-size: rem(48);
+  }
+}
+
+h2 {
+  font-size: rem(28);
+  @include respond(md) {
+    font-size: rem(36);
+  }
+}
+
+h3 {
+  font-size: rem(20);
+  @include respond(md) {
+    font-size: rem(24);
+  }
+}
+
+p {
+  font-size: $font-size-base;
+  margin-bottom: $spacing-md;
+}
+
+a {
+  color: $accent;
+  text-decoration: none;
+  @include transition(color);
+
+  &:hover {
+    color: $accent;
+  }
+}

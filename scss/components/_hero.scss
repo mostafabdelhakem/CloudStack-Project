@@ -1,0 +1,165 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.hero {
+  padding: $spacing-lg 0;
+  background: linear-gradient(135deg, $secondary 0%, $accent 100%);
+  position: relative;
+  overflow: hidden;
+
+  // Optional: Add a subtle tech-inspired pattern overlay
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba($text-light, 0.1) 2px,
+      transparent 2px
+    );
+    background-size: 20px 20px;
+    opacity: 0.2;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    @include respond(sm) {
+      gap: $spacing-lg;
+    }
+
+    @include respond(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond(lg) {
+      grid-template-columns: 1fr 1.2fr;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+
+    @include respond(md) {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    font-family: $font-secondary;
+    font-size: rem(32);
+    font-weight: 800;
+    color: $text-light;
+    margin-bottom: $spacing-md;
+    text-shadow: 0 2px 4px rgba($primary, 0.3);
+
+    @include respond(sm) {
+      font-size: rem(36);
+    }
+
+    @include respond(md) {
+      font-size: rem(48);
+    }
+  }
+
+  &__description {
+    font-size: rem(16);
+    color: $text-light;
+    opacity: 0.9;
+    margin-bottom: $spacing-lg;
+    line-height: 1.8;
+
+    @include respond(sm) {
+      font-size: rem(18);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    justify-content: center;
+
+    @include respond(sm) {
+      flex-direction: row;
+      gap: $spacing-md;
+    }
+
+    @include respond(md) {
+      justify-content: flex-start;
+    }
+
+    .btn {
+      position: relative;
+      overflow: hidden;
+      @include transition(all);
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba($primary, 0.2);
+      }
+
+      &--primary::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba($text-light, 0.2);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.4s ease, height 0.4s ease;
+      }
+
+      &--primary:hover::after {
+        width: 200%;
+        height: 200%;
+      }
+    }
+  }
+
+  &__image {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease 0.2s forwards;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      animation: float 3s ease-in-out infinite;
+
+      // Tip: Add loading="lazy" to <img> in HTML for performance
+    }
+  }
+
+  // Animation keyframes
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}

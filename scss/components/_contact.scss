@@ -1,0 +1,177 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+@use "sass:color";
+
+// Define theme colors to match the website
+$theme-bg: #f9fafc; // Light gray background
+$theme-text: #333; // Dark gray text
+$theme-accent: #00bcd4; // Cyan accent
+$theme-card-bg: #fff; // White card background
+$theme-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Subtle shadow
+
+.contact-section {
+  padding: $spacing-xl 0;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+
+    h2 {
+      font-family: $font-primary; // Assuming Inter
+      font-size: rem(28);
+      font-weight: 700;
+      color: $theme-text;
+      margin-bottom: $spacing-sm;
+    }
+
+    p {
+      font-family: $font-primary;
+      font-size: rem(16);
+      font-weight: 400;
+      color: color.adjust($theme-text, $lightness: 20%);
+    }
+  }
+
+  .contact-wrapper {
+    display: grid;
+    gap: $spacing-lg;
+    grid-template-columns: 1fr;
+
+    @include respond(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .contact-info {
+    background: $theme-card-bg;
+    border-radius: 5px;
+    padding: $spacing-md;
+    box-shadow: $theme-shadow;
+    @include transition(all 0.2s ease);
+
+    &:hover {
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-item {
+      display: flex;
+      gap: $spacing-md;
+      margin-bottom: $spacing-lg; // Increased spacing between items
+      align-items: flex-start;
+
+      &:last-child {
+        margin-bottom: 0; // Remove margin from the last item
+      }
+
+      .icon {
+        font-size: rem(24);
+        color: $theme-accent;
+        margin-top: rem(4); // Align icon with text
+      }
+
+      .content {
+        h3 {
+          font-family: $font-primary;
+          font-size: rem(18);
+          font-weight: 600;
+          color: $theme-text;
+          margin-bottom: $spacing-xs;
+        }
+
+        p {
+          font-family: $font-primary;
+          font-size: rem(14);
+          font-weight: 400;
+          color: color.adjust($theme-text, $lightness: 10%);
+          line-height: 1.6;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    background: $theme-card-bg;
+    border-radius: 5px;
+    padding: $spacing-md;
+    box-shadow: $theme-shadow;
+    @include transition(all 0.2s ease);
+
+    &:hover {
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .form-group {
+      margin-bottom: $spacing-lg; // Increased spacing between form fields
+
+      &:last-child {
+        margin-bottom: $spacing-md; // Slightly less spacing before the button
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: $spacing-sm;
+        border: 1px solid color.adjust($theme-text, $lightness: 50%);
+        border-radius: 5px;
+        background: $theme-card-bg;
+        color: $theme-text;
+        font-family: $font-primary;
+        font-size: rem(16);
+        @include transition(all 0.2s ease);
+
+        &:focus {
+          outline: none;
+          border-color: $theme-accent;
+          box-shadow: 0 0 0 3px rgba($theme-accent, 0.1);
+        }
+
+        &::placeholder {
+          color: color.adjust($theme-text, $lightness: 30%);
+        }
+      }
+
+      textarea {
+        min-height: 150px;
+        resize: vertical;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: $spacing-sm $spacing-md;
+      background: $theme-accent;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-family: $font-primary;
+      font-size: rem(16);
+      font-weight: 600;
+      cursor: pointer;
+      @include transition(all 0.2s ease);
+
+      &:hover {
+        background: color.adjust($theme-accent, $lightness: -10%);
+        transform: translateY(-2px);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .form-success {
+    text-align: center;
+    font-family: $font-primary;
+    font-size: rem(16);
+    color: $theme-text;
+    padding: $spacing-md;
+    background: $theme-card-bg;
+    border-radius: 5px;
+    box-shadow: $theme-shadow;
+  }
+}

@@ -1,0 +1,158 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+@use "cards" as *;
+
+// Define theme colors to match the website
+$theme-bg: #f9fafc; // Light gray background
+$theme-text: #333; // Dark gray text
+$theme-accent: #00bcd4; // Cyan accent
+$theme-card-bg: #fff; // White card background
+$theme-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Subtle shadow
+
+.pricing {
+  padding: $spacing-xl 0;
+  background: $theme-bg;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__toggle {
+    @include flex-center;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-lg;
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .slider {
+          background: $accent;
+        }
+
+        &:checked + .slider:before {
+          transform: translateX(26px);
+        }
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $primary;
+        @include transition(background);
+        border-radius: 34px;
+
+        &:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background: $text-light;
+          @include transition(transform);
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .pricing__save {
+      color: $secondary;
+      font-weight: 600;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: $spacing-md;
+    grid-template-columns: 1fr;
+
+    @include respond(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .pricing-card {
+    @extend .card;
+    text-align: center;
+
+    &--featured {
+      border: 2px solid $accent;
+      position: relative;
+
+      .pricing-card__badge {
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        background: $accent;
+        color: $text-light;
+        padding: $spacing-xs $spacing-sm;
+        border-radius: 5px;
+        font-size: rem(14);
+      }
+    }
+
+    &__header {
+      margin-bottom: $spacing-md;
+    }
+
+    &__title {
+      font-size: rem(24);
+    }
+
+    &__price {
+      .price {
+        font-size: rem(32);
+        font-weight: 700;
+        margin: $spacing-md 0;
+
+        span {
+          font-size: rem(16);
+          font-weight: 400;
+        }
+
+        &.yearly {
+          display: none;
+        }
+      }
+    }
+
+    &__features ul {
+      list-style: none;
+      margin-bottom: $spacing-lg;
+
+      li {
+        margin: $spacing-sm 0;
+        i {
+          margin-right: $spacing-sm;
+          color: $accent;
+        }
+        .fa-times {
+          color: #ff4d4f;
+        }
+      }
+    }
+  }
+
+  &.yearly {
+    .price.monthly {
+      display: none;
+    }
+    .price.yearly {
+      display: block;
+    }
+  }
+}

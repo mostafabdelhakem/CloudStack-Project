@@ -1,0 +1,82 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+@use "sass:color";
+
+// Define theme colors to match the website
+$theme-bg: #f9fafc; // Light gray background
+$theme-text: #333; // Dark gray text
+$theme-accent: #00bcd4; // Cyan accent
+$theme-card-bg: #fff; // White card background
+$theme-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Subtle shadow
+
+.faq {
+  padding: $spacing-xl 0;
+  background: $theme-bg;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+
+    .section-title {
+      font-family: $font-primary; // Assuming Inter
+      font-size: rem(28);
+      font-weight: 700;
+      color: $theme-text;
+      margin-bottom: $spacing-sm;
+    }
+
+    .section-subtitle {
+      font-family: $font-primary;
+      font-size: rem(16);
+      font-weight: 400;
+      color: color.adjust($theme-text, $lightness: 20%);
+    }
+  }
+
+  &__grid {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background: $theme-card-bg;
+    border-radius: 5px;
+    padding: $spacing-md;
+    margin-bottom: $spacing-md; // Spacing between cards
+    box-shadow: $theme-shadow;
+    @include transition(all 0.2s ease);
+
+    &:hover {
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    &__question {
+      font-family: $font-primary;
+      font-size: rem(16);
+      font-weight: 600;
+      color: $theme-text;
+      margin-bottom: $spacing-sm;
+
+      @include respond(sm) {
+        font-size: rem(18);
+      }
+    }
+
+    &__answer {
+      font-family: $font-primary;
+      font-size: rem(14);
+      font-weight: 400;
+      color: color.adjust($theme-text, $lightness: 10%);
+      line-height: 1.6;
+
+      p {
+        margin: 0;
+      }
+
+      @include respond(sm) {
+        font-size: rem(15);
+      }
+    }
+  }
+}

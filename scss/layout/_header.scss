@@ -25,9 +25,9 @@
     gap: $spacing-md;
 
     .btn {
-      @include transition(all);
       &:hover {
-        background-color: $accent;
+        box-shadow: 0 4px 10px rgba($primary, 0.2);
+        border: 1px solid $accent;
       }
     }
   }
